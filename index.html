@@ -1,1355 +1,1283 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BeyondTheScale — 9-Week Fat Loss Blueprint for XL/XXL/XXXL</title>
+    <meta name="description" content="BeyondTheScale helps people in XL/XXL/XXXL lose fat, build sustainable habits, and feel like themselves again — with Indian meals, no calorie counting, no supplements." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #faf6f0;
+            --bg-soft: #f0e8dd;
+            --bg-dark: #2c241c;
+            --ink: #2c241c;
+            --ink-soft: #6b5d4f;
+            --line: #ddd0c0;
+            --accent: #b87333;
+            --accent-light: #d4a373;
+            --accent-dark: #8b5a2b;
+            --accent-soft: #f5e8d8;
+            --accent-warm: #c67a3a;
+            --accent-warm-press: #a86228;
+            --accent-warm-soft: #f5e8d8;
+            --ok: #7a9b6a;
+            --ok-soft: #eef5e8;
+            --urgent: #a64d2e;
+            --urgent-soft: #f5e0d8;
+            --radius: 20px;
+            --maxw: 1120px;
+            --shadow: 0 20px 56px rgba(44, 36, 28, 0.10);
+            --shadow-sm: 0 8px 24px rgba(44, 36, 28, 0.06);
+            --display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --body: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--body);
+            color: var(--ink);
+            background: var(--bg);
+            font-size: 18px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        h1,
+        h2,
+        h3 {
+            font-family: var(--display);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+        p {
+            margin: 0;
+        }
+        .hl {
+            color: var(--accent-warm);
+        }
+        .urgent-bar {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--urgent);
+            color: #fff;
+            padding: 10px 16px;
+            text-align: center;
+            font-size: 14.5px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            letter-spacing: 0.02em;
+        }
+        .urgent-bar .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 14px;
+            border-radius: 100px;
+            font-weight: 800;
+        }
+        .urgent-bar .blink {
+            animation: blink 1.2s infinite;
+        }
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+        .brand-bar {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg);
+            padding: 14px 22px;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .brand-bar .logo {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: -0.02em;
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .brand-bar .logo .dot {
+            color: var(--accent-warm);
+            font-size: 28px;
+        }
+        .brand-bar .tagline {
+            font-size: 14px;
+            color: var(--ink-soft);
+            font-weight: 500;
+        }
+        .brand-bar .tagline strong {
+            color: var(--accent-dark);
+        }
+        .band {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 72px 0;
+        }
+        .band.soft {
+            background: var(--bg-soft);
+        }
+        .band.dark {
+            background: var(--bg-dark);
+            color: #fff;
+        }
+        .band.dark .ink-soft {
+            color: #c4b8a8;
+        }
+        .band.tight {
+            padding: 48px 0;
+        }
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+        .narrow {
+            max-width: 760px;
+        }
+        .center {
+            text-align: center;
+        }
+        .ink-soft {
+            color: var(--ink-soft);
+        }
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--body);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent-dark);
+            background: var(--accent-soft);
+            padding: 8px 16px;
+            border-radius: 100px;
+            margin-bottom: 18px;
+        }
+        .band.dark .eyebrow {
+            background: rgba(184, 115, 51, 0.25);
+            color: #d4a373;
+        }
+        .h-sec {
+            font-size: clamp(30px, 4.8vw, 48px);
+            margin-bottom: 14px;
+        }
+        .sub-sec {
+            font-size: clamp(17px, 2.2vw, 21px);
+            color: var(--ink-soft);
+            max-width: 680px;
+        }
+        .center .sub-sec {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.01em;
+            background: var(--accent-warm);
+            color: #fff;
+            padding: 20px 44px;
+            border-radius: 14px;
+            border: 0;
+            cursor: pointer;
+            box-shadow: 0 14px 34px rgba(184, 115, 51, 0.36);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            text-align: center;
+            line-height: 1.15;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn:hover {
+            background: var(--accent-warm-press);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 44px rgba(184, 115, 51, 0.44);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .btn .sm {
+            display: block;
+            font-family: var(--body);
+            font-weight: 500;
+            font-size: 13px;
+            opacity: 0.92;
+            letter-spacing: 0;
+            margin-top: 4px;
+        }
+        .btn .price-bump {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 12px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+        .cta-note {
+            margin-top: 14px;
+            font-size: 14px;
+            color: var(--ink-soft);
+        }
+        .band.dark .cta-note {
+            color: #c4b8a8;
+        }
+        .hero {
+            padding: 30px 0 64px;
+            background: radial-gradient(1300px 480px at 80% -10%, rgba(184, 115, 51, 0.08), transparent 65%), var(--bg);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 54px;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: clamp(36px, 5.8vw, 62px);
+            margin-bottom: 18px;
+        }
+        .hero .lede {
+            font-size: clamp(18px, 2.4vw, 22px);
+            color: var(--ink-soft);
+            margin-bottom: 28px;
+            max-width: 580px;
+        }
+        .hero .launch-badge {
+            display: inline-block;
+            background: var(--accent-warm);
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 4px 18px;
+            border-radius: 100px;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            margin-top: 28px;
+        }
+        .trust-row span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--ink-soft);
+        }
+        .mock-frame {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--line);
+        }
+        .mock-frame img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .pain-grid {
+            display: grid;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        .pain-grid .pain-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 22px;
+            box-shadow: var(--shadow-sm);
+            font-weight: 500;
+        }
+        .pain-grid .x {
+            flex: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--urgent-soft);
+            color: var(--urgent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            margin-top: 1px;
+        }
+        .stat-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 40px 44px;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-sm);
+            margin-top: 20px;
+        }
+        .stat-number {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(52px, 8vw, 88px);
+            line-height: 1;
+            color: var(--accent-warm);
+            letter-spacing: -0.03em;
+        }
+        .stat-number span {
+            font-size: 28px;
+            color: var(--ink);
+            font-weight: 600;
+        }
+        .stat-text {
+            font-size: 18px;
+            color: var(--ink-soft);
+            max-width: 400px;
+            font-weight: 500;
+        }
+        .stat-text strong {
+            color: var(--ink);
+        }
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 28px;
+        }
+        .roadmap-step {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 22px 18px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .roadmap-step:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        .roadmap-step .week {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            color: var(--accent-dark);
+            text-transform: uppercase;
+            background: var(--accent-soft);
+            display: inline-block;
+            padding: 2px 14px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+        .roadmap-step h4 {
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        .roadmap-step p {
+            font-size: 14px;
+            color: var(--ink-soft);
+            line-height: 1.4;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 12px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        .card .ic {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+        .card p {
+            color: var(--ink-soft);
+            font-size: 16px;
+        }
+        .offer-box {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #fff;
+            border: 2px solid var(--accent-warm);
+            border-radius: 24px;
+            padding: 40px 44px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .offer-box .badge-flag {
+            position: absolute;
+            top: 16px;
+            right: -28px;
+            background: var(--accent-warm);
+            color: #fff;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 4px 40px;
+            transform: rotate(45deg);
+            letter-spacing: 0.08em;
+            font-family: var(--body);
+        }
+        .offer-box .price {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(52px, 8vw, 80px);
+            line-height: 1;
+            color: var(--ink);
+            margin: 10px 0 4px;
+        }
+        .offer-box .price .old-price {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--ink-soft);
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+        .offer-box .price small {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--ink-soft);
+        }
+        .offer-box .sub {
+            font-size: 16px;
+            color: var(--ink-soft);
+            margin-bottom: 18px;
+        }
+        .offer-box .bonus-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 18px;
+            margin: 14px 0 22px;
+        }
+        .offer-box .bonus-list span {
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .offer-box .bonus-list span::before {
+            content: "✓";
+            color: var(--ok);
+            font-weight: 800;
+            font-size: 18px;
+        }
+        .offer-box .urgency-note {
+            background: var(--urgent-soft);
+            color: var(--urgent);
+            font-weight: 700;
+            font-size: 15px;
+            padding: 10px 18px;
+            border-radius: 12px;
+            margin: 12px 0 18px;
+            display: inline-block;
+        }
+        .urgency-section {
+            background: var(--accent-dark);
+            color: #fff;
+            border-radius: var(--radius);
+            padding: 36px 40px;
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(139, 90, 43, 0.30);
+        }
+        .urgency-section h3 {
+            font-size: clamp(24px, 4vw, 36px);
+            margin-bottom: 8px;
+        }
+        .urgency-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto 18px;
+        }
+        .urgency-section .highlight-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 24px;
+            border-radius: 12px;
+            display: inline-block;
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+        .urgency-section .btn {
+            background: #fff;
+            color: var(--accent-dark);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+        }
+        .urgency-section .btn:hover {
+            background: #f5e8d8;
+        }
+        .guarantee-box {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            background: #fff;
+            border: 2px solid var(--ok);
+            border-radius: 24px;
+            padding: 32px 36px;
+            max-width: 860px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-sm);
+        }
+        .seal {
+            flex: none;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--ok-soft);
+            color: var(--ok);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 1;
+            border: 2px dashed var(--ok);
+        }
+        .seal span {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            margin-top: 4px;
+        }
+        .guarantee-box h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .guarantee-box p {
+            color: var(--ink-soft);
+            font-size: 16px;
+        }
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 12px;
+        }
+        .bonus-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--accent-warm);
+            border-radius: 14px;
+            padding: 24px 26px;
+            box-shadow: var(--shadow-sm);
+        }
+        .bonus-card .kick {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+            margin-bottom: 8px;
+        }
+        .bonus-card h3 {
+            font-size: 19px;
+            margin-bottom: 6px;
+        }
+        .bonus-card p {
+            color: var(--ink-soft);
+            font-size: 15.5px;
+        }
+        .bonus-card .bonus-expiry {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-warm);
+            background: var(--accent-soft);
+            padding: 2px 14px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .faq-list {
+            max-width: 760px;
+            margin: 6px auto 0;
+        }
+        .faq-list details {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            margin-bottom: 12px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        .faq-list summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 20px 24px;
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .faq-list summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-list summary .chev {
+            flex: none;
+            transition: transform 0.2s ease;
+            color: var(--accent-warm);
+            font-size: 24px;
+            line-height: 1;
+        }
+        .faq-list details[open] summary .chev {
+            transform: rotate(45deg);
+        }
+        .faq-list .ans {
+            padding: 0 24px 22px;
+            color: var(--ink-soft);
+            font-size: 16px;
+        }
+        .sticky-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 50;
+            display: none;
+            background: #fff;
+            border-top: 1px solid var(--line);
+            box-shadow: 0 -8px 28px rgba(44, 36, 28, 0.10);
+            padding: 10px 14px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .sticky-cta .pr {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 1;
+            color: var(--accent-warm);
+        }
+        .sticky-cta .pr .old {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            text-decoration: line-through;
+            margin-right: 6px;
+        }
+        .sticky-cta .pr small {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-soft);
+        }
+        .sticky-cta .btn {
+            padding: 12px 20px;
+            font-size: 15px;
+            box-shadow: none;
+            flex: none;
+            width: auto;
+            background: var(--accent-warm);
+        }
+        footer {
+            background: var(--bg-dark);
+            color: #c4b8a8;
+            text-align: center;
+            padding: 36px 22px;
+            font-size: 14px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        footer a {
+            color: #ddd0c0;
+            text-decoration: underline;
+        }
+        footer .f-links {
+            margin-bottom: 10px;
+        }
+        footer .f-links a {
+            margin: 0 10px;
+        }
+        footer .brand-footer {
+            font-family: var(--display);
+            font-weight: 700;
+            color: #d4a373;
+            letter-spacing: 0.02em;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.in {
+            opacity: 1;
+            transform: none;
+        }
+        @media (max-width: 860px) {
+            .band {
+                padding: 52px 0;
+            }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .hero .mock {
+                order: 2;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+            .card-grid,
+            .bonus-grid {
+                grid-template-columns: 1fr;
+            }
+            .roadmap {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .guarantee-box {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                padding: 28px 22px;
+            }
+            .btn {
+                width: 100%;
+                padding: 18px 24px;
+                font-size: 18px;
+            }
+            .stat-block {
+                flex-direction: column;
+                text-align: center;
+                padding: 28px 22px;
+            }
+            .offer-box {
+                padding: 32px 20px;
+            }
+            .sticky-cta {
+                display: flex;
+            }
+            body {
+                padding-bottom: 76px;
+            }
+            .hero h1 {
+                font-size: clamp(30px, 7vw, 42px);
+            }
+            .urgency-section {
+                padding: 28px 20px;
+            }
+            .brand-bar .tagline {
+                font-size: 12px;
+            }
+            .brand-bar .logo {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 540px) {
+            .roadmap {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .roadmap-step {
+                padding: 16px 12px;
+            }
+            .roadmap-step h4 {
+                font-size: 15px;
+            }
+            .offer-box .badge-flag {
+                font-size: 10px;
+                padding: 2px 30px;
+                right: -20px;
+                top: 12px;
+            }
+            .urgent-bar {
+                font-size: 12.5px;
+                padding: 8px 12px;
+            }
+            .brand-bar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 10px 16px;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+            .card:hover,
+            .roadmap-step:hover {
+                transform: none;
+            }
+            .urgent-bar .blink {
+                animation: none;
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;BeyondTheScale — 9-Week Fat Loss Blueprint for XL/XXL/XXXL&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="description" content="BeyondTheScale helps people in XL/XXL/XXXL lose fat, build sustainable habits, and feel like themselves again — with Indian meals, no calorie counting, no supplements." /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== ROOT — Warm, Earthy Monochromatic Palette ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--bg: #faf6f0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--bg-soft: #f0e8dd;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--bg-dark: #2c241c;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--ink: #2c241c;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--ink-soft: #6b5d4f;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--line: #ddd0c0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--accent: #b87333;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--accent-light: #d4a373;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--accent-dark: #8b5a2b;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--accent-soft: #f5e8d8;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--accent-warm: #c67a3a;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--accent-warm-press: #a86228;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--accent-warm-soft: #f5e8d8;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--ok: #7a9b6a;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--ok-soft: #eef5e8;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--urgent: #a64d2e;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--urgent-soft: #f5e0d8;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--maxw: 1120px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--shadow: 0 20px 56px rgba(44, 36, 28, 0.10);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--shadow-sm: 0 8px 24px rgba(44, 36, 28, 0.06);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>--body: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>html,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>scroll-behavior: smooth;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--body);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>-webkit-font-smoothing: antialiased;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: inherit;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h1,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h2,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.08;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: -0.02em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hl {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== TOP URGENCY BAR ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgent-bar {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100vw;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(-50%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--urgent);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14.5px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.02em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgent-bar .highlight {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.2);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 2px 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgent-bar .blink {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: blink 1.2s infinite;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes blink {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>0%,</p>
-<p class="p1"><span class="Apple-converted-space">            </span>100% {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>opacity: 1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>50% {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>opacity: 0.3;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== TOP NAV / BRAND BAR ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.brand-bar {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100vw;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(-50%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 14px 22px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.brand-bar .logo {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: -0.02em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.brand-bar .logo .dot {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.brand-bar .tagline {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.brand-bar .tagline strong {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== LAYOUT ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.band {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100vw;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(-50%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 72px 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.band.soft {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--bg-soft);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.band.dark {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--bg-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.band.dark .ink-soft {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #c4b8a8;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.band.tight {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 48px 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.wrap {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: var(--maxw);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0 22px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.narrow {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 760px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.center {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.ink-soft {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.eyebrow {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--body);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.12em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 8px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.band.dark .eyebrow {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(184, 115, 51, 0.25);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #d4a373;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.h-sec {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: clamp(30px, 4.8vw, 48px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.sub-sec {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: clamp(17px, 2.2vw, 21px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 680px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.center .sub-sec {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-left: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== BUTTONS ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: -0.01em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px 44px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 14px 34px rgba(184, 115, 51, 0.36);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.15;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-warm-press);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-3px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 44px rgba(184, 115, 51, 0.44);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn:active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(0);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn .sm {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--body);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.92;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.btn .price-bump {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.2);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 2px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-left: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.cta-note {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.band.dark .cta-note {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #c4b8a8;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== HERO ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px 0 64px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: radial-gradient(1300px 480px at 80% -10%, rgba(184, 115, 51, 0.08), transparent 65%), var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero-grid {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: 1.1fr 0.9fr;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 54px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: clamp(36px, 5.8vw, 62px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero .lede {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: clamp(18px, 2.4vw, 22px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 580px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero .launch-badge {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 4px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.05em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.trust-row {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.trust-row span {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14.5px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.mock-frame {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.mock-frame img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>aspect-ratio: 4/3;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>object-fit: cover;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== PAIN LIST ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.pain-grid {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.pain-grid .pain-item {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 18px 22px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow-sm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.pain-grid .x {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--urgent-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--urgent);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 1px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== STATS ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.stat-block {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 44px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow-sm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.stat-number {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: clamp(52px, 8vw, 88px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: -0.03em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.stat-number span {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.stat-text {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 400px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.stat-text strong {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== ROADMAP ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(3, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-step {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 22px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow-sm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.2s ease, box-shadow 0.2s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-step:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-4px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-step .week {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.08em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 2px 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-step h4 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 17px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.roadmap-step p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.4;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== CARDS ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card-grid {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(2, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow-sm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.2s ease, box-shadow 0.2s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-4px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card .ic {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 21px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.card p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== OFFER BOX ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 680px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 44px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .badge-flag {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>right: -28px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 4px 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: rotate(45deg);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.08em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--body);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .price {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: clamp(52px, 8vw, 80px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0 4px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .price .old-price {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: line-through;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .price small {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .sub {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .bonus-list {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 8px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 14px 0 22px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .bonus-list span {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .bonus-list span::before {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>content: "✓";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ok);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.offer-box .urgency-note {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--urgent-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--urgent);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 12px 0 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== URGENCY SECTION ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgency-section {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 36px 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 760px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 12px 40px rgba(139, 90, 43, 0.30);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgency-section h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: clamp(24px, 4vw, 36px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgency-section p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.9;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 500px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto 18px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgency-section .highlight-box {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.15);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgency-section .btn {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.urgency-section .btn:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #f5e8d8;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== GUARANTEE ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.guarantee-box {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 28px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid var(--ok);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 32px 36px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 860px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow-sm);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.seal {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 96px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 96px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--ok-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ok);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 2px dashed var(--ok);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.seal span {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 11px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.06em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.guarantee-box h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.guarantee-box p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== BONUS CARDS ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bonus-grid {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(2, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bonus-card {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-left: 4px solid var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 24px 26px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow-sm);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bonus-card .kick {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.1em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bonus-card h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 19px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bonus-card p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15.5px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bonus-card .bonus-expiry {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 2px 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== FAQ ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.faq-list {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 760px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 6px auto 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.faq-list details {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: var(--shadow-sm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.faq-list summary {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.faq-list summary::-webkit-details-marker {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.faq-list summary .chev {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.2s ease;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.faq-list details[open] summary .chev {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: rotate(45deg);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.faq-list .ans {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0 24px 22px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== STICKY CTA ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.sticky-cta {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>right: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>bottom: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 50;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-top: 1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 -8px 28px rgba(44, 36, 28, 0.10);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.sticky-cta .pr {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.sticky-cta .pr .old {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: line-through;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.sticky-cta .pr small {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: var(--ink-soft);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.sticky-cta .btn {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--accent-warm);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== FOOTER ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: var(--bg-dark);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #c4b8a8;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 36px 22px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100vw;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(-50%);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #ddd0c0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: underline;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer .f-links {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer .f-links a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer .brand-footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: var(--display);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #d4a373;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.02em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== REVEAL ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.reveal {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(22px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: opacity 0.7s ease, transform 0.7s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.reveal.in {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 1;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* ===== RESPONSIVE ===== */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 860px) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.band {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 52px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.hero-grid {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>gap: 36px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.hero .mock {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>order: 2;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>max-width: 420px;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.card-grid,</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.bonus-grid {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.roadmap {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>grid-template-columns: repeat(2, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.guarantee-box {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>gap: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 28px 22px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.btn {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 18px 24px;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.stat-block {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 28px 22px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.offer-box {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 32px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.sticky-cta {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding-bottom: 76px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.hero h1 {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-size: clamp(30px, 7vw, 42px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.urgency-section {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 28px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.brand-bar .tagline {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.brand-bar .logo {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 540px) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.roadmap {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>grid-template-columns: 1fr 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>gap: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.roadmap-step {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 16px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.roadmap-step h4 {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-size: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.offer-box .badge-flag {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-size: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 2px 30px;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>right: -20px;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>top: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.urgent-bar {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>font-size: 12.5px;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 8px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.brand-bar {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>padding: 10px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (prefers-reduced-motion: reduce) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>animation: none !important;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>transition: none !important;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.reveal {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>opacity: 1;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>transform: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.card:hover,</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.roadmap-step:hover {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>transform: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.urgent-bar .blink {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>animation: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== TOP URGENCY BAR ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="urgent-bar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;⚠️&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;&lt;strong&gt;PRICE INCREASE COMING SOON&lt;/strong&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="highlight"&gt;₹499&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;is a launch special — price goes up to &lt;strong&gt;₹999&lt;/strong&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="blink"&gt;🔴 Lock in your discount now&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== BRAND BAR ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="brand-bar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;BeyondTheScale&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="dot"&gt;•&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tagline"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;strong&gt;Real results&lt;/strong&gt; that go beyond the number</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== HERO ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero band" id="top"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hero-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="launch-badge"&gt;🔥 Launch Price — 50% Off&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h1&gt;You've Tried Everything. &lt;span class="hl"&gt;This Time Is Different.&lt;/span&gt;&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="lede"&gt;The 9-Week Fat Loss Blueprint helps people in XL/XXL/XXXL lose excess fat, build sustainable habits, and feel like themselves again — with Indian meals you already love, zero calorie counting, and no expensive supplements.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Get Instant Access — ₹499</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="sm"&gt;Price increases to ₹999 soon &lt;span class="price-bump"&gt;Save 50%&lt;/span&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="trust-row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;✓ No calorie counting&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;✓ No expensive supplements&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;✓ 100+ Indian meal options&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mock"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mock-frame"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;img src="https://drive.google.com/file/d/13Yv5J7zt9bISVfGzVqDSGk1T264bavAe/view?usp=sharing" alt="9-Week Fat Loss Blueprint — Digital PDF Program" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== PAIN / AGITATION ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band soft"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap narrow center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="eyebrow"&gt;😞 The Struggle Is Real&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="h-sec"&gt;You're Not Lazy. You're Not Weak. You've Just Been Given the Wrong Tools.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="sub-sec"&gt;Here's what nobody tells you about being in XL/XXL/XXXL — and why standard diets always fail.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap narrow" style="margin-top: 28px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pain-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="pain-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="x"&gt;✕&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;You've tried every diet.&lt;/strong&gt; Keto, intermittent fasting, juice cleanses — you've done them all. You've lost weight. You've gained it back. Every time.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="pain-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="x"&gt;✕&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;You hide from photos and mirrors.&lt;/strong&gt; You feel invisible. You've been shamed, dismissed, and made to feel like you just need "more willpower."&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="pain-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="x"&gt;✕&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Clothes don't fit.&lt;/strong&gt; Fewer than 10% of brands offer sizes beyond XL. You're forced into shapeless clothes that hide your body.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="pain-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="x"&gt;✕&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;You're exhausted all the time.&lt;/strong&gt; Low energy, poor sleep, and the mental load of constantly fighting your own body.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="pain-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="x"&gt;✕&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;You've been told to "just eat less."&lt;/strong&gt; As if it were that simple. As if you haven't tried that a hundred times.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== RESEARCH / EMPATHY ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="eyebrow"&gt;📊 The Science Behind the Struggle&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="h-sec"&gt;The Hidden Barrier No One Talks About&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="sub-sec" style="margin-bottom: 16px;"&gt;A landmark Indian study revealed the real reason diets fail for people in larger bodies.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="stat-block"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-number"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>71.1&lt;span&gt;%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-text"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>of people with obesity experience &lt;strong&gt;internalized weight bias&lt;/strong&gt; — they believe the negative stereotypes society throws at them. This doesn't just hurt emotionally. It &lt;strong&gt;kills motivation, sabotages diet adherence, and leads to weight regain&lt;/strong&gt;.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== VISUAL ROADMAP ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band soft"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="eyebrow"&gt;🗺️ Your Path to Change&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="h-sec"&gt;How the 9 Weeks Unfold&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="sub-sec"&gt;No overwhelm. No perfectionism. Just small, consistent steps that build on each other.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="roadmap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 1&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Hydration &amp;amp; Awareness&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Start with a simple water target and track your current eating pattern without changing anything.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 2&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Breakfast Upgrade&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Swap one meal for a high-protein, Indian breakfast option that keeps you full longer.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 3&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Lunch Restructure&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Balance your lunch plate with the right portions of roti, dal, sabzi, and salad.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 4&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Smart Snacking&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Replace chips and biscuits with satisfying, nutrient-dense Indian snack alternatives.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 5&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Dinner Optimization&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Lighten your dinner without feeling deprived — using simple Indian preparations.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 6&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Meal Timing&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Structure your eating windows to align with your body's natural hunger cues.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 7&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Mindful Eating&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Learn to recognize true hunger vs. emotional triggers — without restriction.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 8&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Movement Integration&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Add simple walking and light activity into your daily routine, regardless of joint pain.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="roadmap-step"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="week"&gt;Week 9&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4&gt;Lifestyle &amp;amp; Maintenance&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Solidify your habits and create a sustainable plan that works for the long haul.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== WHAT'S INSIDE ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="eyebrow"&gt;📦 What You Get&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="h-sec"&gt;A Complete System, Not Just a Diet&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="sub-sec" style="margin-bottom: 32px;"&gt;Everything you need to break the cycle of yo-yo dieting and build a lifestyle that actually sticks.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="ic"&gt;🍛&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;100+ Indian Meal Options&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Breakfast, lunch, snacks, and dinner — all with familiar Indian flavours. Roti, dal, sabzi, chawal. Real food.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="ic"&gt;📈&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Weekly Habit Progression&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Build sustainable habits step by step — each week builds on the last for lasting change. No overwhelm.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="ic"&gt;🌿&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Detox &amp;amp; Light Eating Days&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Built-in lighter eating days that help you stay consistent without feeling deprived or restricted.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="ic"&gt;💪&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Practical Lifestyle Guidelines&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Hydration, meal timing, walking, and physical activity — the complete picture for lasting health.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="ic"&gt;🧠&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Mindset &amp;amp; Emotional Eating&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Strategies to break the emotional eating cycle and build a healthier relationship with food.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="ic"&gt;📱&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Mobile-Friendly Digital PDF&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Access anytime on your phone, tablet, or computer — your blueprint goes wherever you go.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== URGENCY SECTION ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band soft"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap narrow"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="urgency-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span style="font-size: 32px; display: block; margin-bottom: 6px;"&gt;⏳&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Don't Wait — Price Increases Soon&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;You're seeing the &lt;strong&gt;launch price&lt;/strong&gt; of ₹499. Once this limited-time offer ends, the price jumps to ₹999.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="highlight-box"&gt;₹499 → ₹999&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p style="font-size: 15px; opacity: 0.85;"&gt;Plus, the 4 free bonuses are only available with this launch pricing.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program" style="margin-top: 12px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Lock in ₹499 Now</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="sm"&gt;Before the price goes up&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== PRICE / OFFER ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap narrow"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="eyebrow"&gt;💰 Simple, Fair Pricing&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="h-sec"&gt;Invest in a Plan That Actually Works&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="sub-sec" style="margin-bottom: 28px;"&gt;No hidden fees. No upsells. Just a complete system to help you finally break the cycle.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="offer-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="badge-flag"&gt;Launch Price&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="font-size: 16px; font-weight: 600; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 0.06em;"&gt;Limited Time Offer&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="price"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="old-price"&gt;₹999&lt;/span&gt; ₹499 &lt;small&gt;/-&lt;/small&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="sub"&gt;Less than ₹56 per week — for a complete 9-week system&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="urgency-note"&gt;⏳ Price increases to ₹999 — lock in your discount&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bonus-list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span&gt;Daily Water Tracker&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span&gt;Weekly Progress Tracker&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span&gt;Grocery Checklist&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span&gt;Habit Tracker&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program" style="margin-bottom: 12px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Get Instant Access — ₹499</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="sm"&gt;100% Digital · Start in 5 Minutes · Save 50%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p style="font-size: 14px; color: var(--ink-soft);"&gt;Secure checkout · Instant download · 7-day guarantee&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== GUARANTEE ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band soft"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="guarantee-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="seal"&gt;7 &lt;span&gt;DAY GUARANTEE&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Try It Completely Risk-Free&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;If you're not satisfied with the quality and usefulness of the 9-Week Fat Loss Blueprint within 7 days of purchase, simply contact us and we'll provide a full refund. &lt;strong&gt;You have nothing to lose — except the weight.&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== BONUSES ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="eyebrow"&gt;🎁 Included at No Extra Cost&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="h-sec"&gt;4 Free Bonuses to Accelerate Your Progress&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="sub-sec" style="margin-bottom: 28px;"&gt;These tools are designed to keep you accountable and on track — included with your purchase.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bonus-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bonus-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="kick"&gt;Bonus&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Daily Water Intake Tracker&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Stay hydrated with a simple, visual tracker that makes hitting your water goals effortless.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bonus-expiry"&gt;🔥 Only with launch pricing&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bonus-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="kick"&gt;Bonus&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Weekly Progress Tracker&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Monitor your weight, measurements, and energy levels week by week to stay motivated.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bonus-expiry"&gt;🔥 Only with launch pricing&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bonus-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="kick"&gt;Bonus&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Healthy Grocery Shopping Checklist&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Know exactly what to buy at the grocery store — no more guesswork or impulse purchases.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bonus-expiry"&gt;🔥 Only with launch pricing&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bonus-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="kick"&gt;Bonus&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Printable Habit Tracker&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Build consistency and stay accountable with daily habit tracking that fits on your fridge.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bonus-expiry"&gt;🔥 Only with launch pricing&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== FAQ ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band soft"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="eyebrow"&gt;❓ Questions?&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="h-sec"&gt;Frequently Asked Questions&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;summary&gt;"I've tried everything — why would this be different?" &lt;span class="chev"&gt;+&lt;/span&gt;&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="ans"&gt;Because this plan was designed for people exactly like you. It doesn't rely on willpower or perfectionism. It builds habits gradually over 9 weeks, using Indian meals you already eat. No calorie counting, no extreme restriction — just sustainable change. And if you're not satisfied, you're covered by the 7-day guarantee.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;summary&gt;"I don't have time to cook complicated meals." &lt;span class="chev"&gt;+&lt;/span&gt;&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="ans"&gt;That's exactly why this was created. All meal options are simple, practical, and designed for busy people. No complicated recipes, no hours in the kitchen — just straightforward Indian meals you can prepare quickly with everyday ingredients.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;summary&gt;"Will I have to buy expensive supplements?" &lt;span class="chev"&gt;+&lt;/span&gt;&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="ans"&gt;Absolutely not. The 9-Week Fat Loss Blueprint is built around everyday Indian foods you can find at any local grocery store. No protein powders, no exotic superfoods, no expensive supplements — just real, simple food that works.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;summary&gt;"I've lost weight before and gained it all back." &lt;span class="chev"&gt;+&lt;/span&gt;&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="ans"&gt;Most diets focus on quick results. This focuses on sustainability. By building habits gradually over 9 weeks, you're not just losing weight — you're building a lifestyle that helps you keep it off. The habit progression system is designed specifically to prevent burnout and regain.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;summary&gt;"Is this suitable for vegetarians?" &lt;span class="chev"&gt;+&lt;/span&gt;&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="ans"&gt;Yes! The 100+ Indian meal options include plenty of vegetarian and plant-based choices. You'll find options for breakfast, lunch, snacks, and dinner that are naturally vegetarian, with flexibility to adapt based on your preferences.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== FINAL CTA ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="band dark center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="wrap narrow"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="eyebrow"&gt;🚀 Your Transformation Starts Now&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="h-sec" style="color: #fff; font-size: clamp(30px, 5vw, 46px);"&gt;Stop the Cycle of Yo-Yo Dieting, Shame, and Frustration.&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="sub-sec" style="color: #c4b8a8; margin: 0 auto 14px;"&gt;You deserve a plan that actually works for you — not against you. A plan that acknowledges your struggle and gives you the tools to finally break free.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p style="color: #f5e8d8; font-weight: 700; margin: 18px 0 6px; font-size: 19px;"&gt;Get the complete 9-Week Fat Loss Blueprint + 4 bonuses for just ₹499&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p style="color: #d4a373; font-size: 16px; font-weight: 600;"&gt;⚠️ Price increases to ₹999 soon — lock in your discount now&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-top: 24px;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Get Instant Access — ₹499</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="sm"&gt;100% Digital · Start in 5 Minutes · Save 50%&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="cta-note"&gt;Instant access · Lifetime updates · 7-day guarantee · No risk&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== FOOTER ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="f-links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#"&gt;Privacy Policy&lt;/a&gt; |</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#"&gt;Terms of Service&lt;/a&gt; |</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#"&gt;Contact&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="brand-footer"&gt;BeyondTheScale&lt;/span&gt; &amp;mdash; Real results that go beyond the number.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;br style="display:none;" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span style="opacity:0.6;"&gt;© 2026 BeyondTheScale. All rights reserved.&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== STICKY MOBILE CTA ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sticky-cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pr"&gt;&lt;span class="old"&gt;₹999&lt;/span&gt; ₹499 &lt;small&gt;/-&lt;/small&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program"&gt;Lock in ₹499&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ===== SCROLL REVEAL ===== --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>(function() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (window.matchMedia &amp;&amp; window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var els = document.querySelectorAll('.band .wrap, .guarantee-box, .offer-box, .stat-block, .faq-list, .urgency-section');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>els.forEach(function(e) { e.classList.add('reveal'); });</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!('IntersectionObserver' in window)) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>els.forEach(function(e) { e.classList.add('in'); });</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var io = new IntersectionObserver(function(entries) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>entries.forEach(function(entry) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>if (entry.isIntersecting) {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>entry.target.classList.add('in');</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>io.unobserve(entry.target);</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}, { threshold: 0.12 });</p>
-<p class="p1"><span class="Apple-converted-space">            </span>els.forEach(function(e) { io.observe(e); });</p>
-<p class="p1"><span class="Apple-converted-space">        </span>})();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+    <div class="urgent-bar">
+        <span>⚠️</span>
+        <span><strong>PRICE INCREASE COMING SOON</strong></span>
+        <span class="highlight">₹499</span>
+        <span>is a launch special — price goes up to <strong>₹999</strong></span>
+        <span class="blink">🔴 Lock in your discount now</span>
+    </div>
+
+    <div class="brand-bar">
+        <div class="logo">
+            <span>BeyondTheScale</span>
+            <span class="dot">•</span>
+        </div>
+        <div class="tagline">
+            <strong>Real results</strong> that go beyond the number
+        </div>
+    </div>
+
+    <section class="hero band" id="top">
+        <div class="wrap">
+            <div class="hero-grid">
+                <div>
+                    <span class="launch-badge">🔥 Launch Price — 50% Off</span>
+                    <h1>You've Tried Everything. <span class="hl">This Time Is Different.</span></h1>
+                    <p class="lede">The 9-Week Fat Loss Blueprint helps people in XL/XXL/XXXL lose excess fat, build sustainable habits, and feel like themselves again — with Indian meals you already love, zero calorie counting, and no expensive supplements.</p>
+                    <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program">
+                        Get Instant Access — ₹499
+                        <span class="sm">Price increases to ₹999 soon <span class="price-bump">Save 50%</span></span>
+                    </a>
+                    <div class="trust-row">
+                        <span>✓ No calorie counting</span>
+                        <span>✓ No expensive supplements</span>
+                        <span>✓ 100+ Indian meal options</span>
+                    </div>
+                </div>
+                <div class="mock">
+                    <div class="mock-frame">
+                        <img src="https://drive.google.com/file/d/13Yv5J7zt9bISVfGzVqDSGk1T264bavAe/view?usp=sharing" alt="9-Week Fat Loss Blueprint — Digital PDF Program" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band soft">
+        <div class="wrap narrow center">
+            <span class="eyebrow">😞 The Struggle Is Real</span>
+            <h2 class="h-sec">You're Not Lazy. You're Not Weak. You've Just Been Given the Wrong Tools.</h2>
+            <p class="sub-sec">Here's what nobody tells you about being in XL/XXL/XXXL — and why standard diets always fail.</p>
+        </div>
+        <div class="wrap narrow" style="margin-top: 28px;">
+            <div class="pain-grid">
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>You've tried every diet.</strong> Keto, intermittent fasting, juice cleanses — you've done them all. You've lost weight. You've gained it back. Every time.</div>
+                </div>
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>You hide from photos and mirrors.</strong> You feel invisible. You've been shamed, dismissed, and made to feel like you just need "more willpower."</div>
+                </div>
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>Clothes don't fit.</strong> Fewer than 10% of brands offer sizes beyond XL. You're forced into shapeless clothes that hide your body.</div>
+                </div>
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>You're exhausted all the time.</strong> Low energy, poor sleep, and the mental load of constantly fighting your own body.</div>
+                </div>
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>You've been told to "just eat less."</strong> As if it were that simple. As if you haven't tried that a hundred times.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band">
+        <div class="wrap center">
+            <span class="eyebrow">📊 The Science Behind the Struggle</span>
+            <h2 class="h-sec">The Hidden Barrier No One Talks About</h2>
+            <p class="sub-sec" style="margin-bottom: 16px;">A landmark Indian study revealed the real reason diets fail for people in larger bodies.</p>
+        </div>
+        <div class="wrap">
+            <div class="stat-block">
+                <div class="stat-number">
+                    71.1<span>%</span>
+                </div>
+                <div class="stat-text">
+                    of people with obesity experience <strong>internalized weight bias</strong> — they believe the negative stereotypes society throws at them. This doesn't just hurt emotionally. It <strong>kills motivation, sabotages diet adherence, and leads to weight regain</strong>.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band soft">
+        <div class="wrap center">
+            <span class="eyebrow">🗺️ Your Path to Change</span>
+            <h2 class="h-sec">How the 9 Weeks Unfold</h2>
+            <p class="sub-sec">No overwhelm. No perfectionism. Just small, consistent steps that build on each other.</p>
+        </div>
+        <div class="wrap">
+            <div class="roadmap">
+                <div class="roadmap-step">
+                    <div class="week">Week 1</div>
+                    <h4>Hydration &amp; Awareness</h4>
+                    <p>Start with a simple water target and track your current eating pattern without changing anything.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 2</div>
+                    <h4>Breakfast Upgrade</h4>
+                    <p>Swap one meal for a high-protein, Indian breakfast option that keeps you full longer.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 3</div>
+                    <h4>Lunch Restructure</h4>
+                    <p>Balance your lunch plate with the right portions of roti, dal, sabzi, and salad.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 4</div>
+                    <h4>Smart Snacking</h4>
+                    <p>Replace chips and biscuits with satisfying, nutrient-dense Indian snack alternatives.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 5</div>
+                    <h4>Dinner Optimization</h4>
+                    <p>Lighten your dinner without feeling deprived — using simple Indian preparations.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 6</div>
+                    <h4>Meal Timing</h4>
+                    <p>Structure your eating windows to align with your body's natural hunger cues.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 7</div>
+                    <h4>Mindful Eating</h4>
+                    <p>Learn to recognize true hunger vs. emotional triggers — without restriction.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 8</div>
+                    <h4>Movement Integration</h4>
+                    <p>Add simple walking and light activity into your daily routine, regardless of joint pain.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 9</div>
+                    <h4>Lifestyle &amp; Maintenance</h4>
+                    <p>Solidify your habits and create a sustainable plan that works for the long haul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band">
+        <div class="wrap center">
+            <span class="eyebrow">📦 What You Get</span>
+            <h2 class="h-sec">A Complete System, Not Just a Diet</h2>
+            <p class="sub-sec" style="margin-bottom: 32px;">Everything you need to break the cycle of yo-yo dieting and build a lifestyle that actually sticks.</p>
+        </div>
+        <div class="wrap">
+            <div class="card-grid">
+                <div class="card">
+                    <div class="ic">🍛</div>
+                    <h3>100+ Indian Meal Options</h3>
+                    <p>Breakfast, lunch, snacks, and dinner — all with familiar Indian flavours. Roti, dal, sabzi, chawal. Real food.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">📈</div>
+                    <h3>Weekly Habit Progression</h3>
+                    <p>Build sustainable habits step by step — each week builds on the last for lasting change. No overwhelm.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">🌿</div>
+                    <h3>Detox &amp; Light Eating Days</h3>
+                    <p>Built-in lighter eating days that help you stay consistent without feeling deprived or restricted.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">💪</div>
+                    <h3>Practical Lifestyle Guidelines</h3>
+                    <p>Hydration, meal timing, walking, and physical activity — the complete picture for lasting health.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">🧠</div>
+                    <h3>Mindset &amp; Emotional Eating</h3>
+                    <p>Strategies to break the emotional eating cycle and build a healthier relationship with food.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">📱</div>
+                    <h3>Mobile-Friendly Digital PDF</h3>
+                    <p>Access anytime on your phone, tablet, or computer — your blueprint goes wherever you go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band soft">
+        <div class="wrap narrow">
+            <div class="urgency-section">
+                <span style="font-size: 32px; display: block; margin-bottom: 6px;">⏳</span>
+                <h3>Don't Wait — Price Increases Soon</h3>
+                <p>You're seeing the <strong>launch price</strong> of ₹499. Once this limited-time offer ends, the price jumps to ₹999.</p>
+                <div class="highlight-box">₹499 → ₹999</div>
+                <p style="font-size: 15px; opacity: 0.85;">Plus, the 4 free bonuses are only available with this launch pricing.</p>
+                <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program" style="margin-top: 12px;">
+                    Lock in ₹499 Now
+                    <span class="sm">Before the price goes up</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="band center">
+        <div class="wrap narrow">
+            <span class="eyebrow">💰 Simple, Fair Pricing</span>
+            <h2 class="h-sec">Invest in a Plan That Actually Works</h2>
+            <p class="sub-sec" style="margin-bottom: 28px;">No hidden fees. No upsells. Just a complete system to help you finally break the cycle.</p>
+        </div>
+        <div class="wrap">
+            <div class="offer-box">
+                <div class="badge-flag">Launch Price</div>
+                <div style="font-size: 16px; font-weight: 600; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 0.06em;">Limited Time Offer</div>
+                <div class="price">
+                    <span class="old-price">₹999</span> ₹499 <small>/-</small>
+                </div>
+                <div class="sub">Less than ₹56 per week — for a complete 9-week system</div>
+                <div class="urgency-note">⏳ Price increases to ₹999 — lock in your discount</div>
+                <div class="bonus-list">
+                    <span>Daily Water Tracker</span>
+                    <span>Weekly Progress Tracker</span>
+                    <span>Grocery Checklist</span>
+                    <span>Habit Tracker</span>
+                </div>
+                <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program" style="margin-bottom: 12px;">
+                    Get Instant Access — ₹499
+                    <span class="sm">100% Digital · Start in 5 Minutes · Save 50%</span>
+                </a>
+                <p style="font-size: 14px; color: var(--ink-soft);">Secure checkout · Instant download · 7-day guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="band soft">
+        <div class="wrap">
+            <div class="guarantee-box">
+                <div class="seal">7 <span>DAY GUARANTEE</span></div>
+                <div>
+                    <h3>Try It Completely Risk-Free</h3>
+                    <p>If you're not satisfied with the quality and usefulness of the 9-Week Fat Loss Blueprint within 7 days of purchase, simply contact us and we'll provide a full refund. <strong>You have nothing to lose — except the weight.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band">
+        <div class="wrap center">
+            <span class="eyebrow">🎁 Included at No Extra Cost</span>
+            <h2 class="h-sec">4 Free Bonuses to Accelerate Your Progress</h2>
+            <p class="sub-sec" style="margin-bottom: 28px;">These tools are designed to keep you accountable and on track — included with your purchase.</p>
+        </div>
+        <div class="wrap">
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="kick">Bonus</div>
+                    <h3>Daily Water Intake Tracker</h3>
+                    <p>Stay hydrated with a simple, visual tracker that makes hitting your water goals effortless.</p>
+                    <div class="bonus-expiry">🔥 Only with launch pricing</div>
+                </div>
+                <div class="bonus-card">
+                    <div class="kick">Bonus</div>
+                    <h3>Weekly Progress Tracker</h3>
+                    <p>Monitor your weight, measurements, and energy levels week by week to stay motivated.</p>
+                    <div class="bonus-expiry">🔥 Only with launch pricing</div>
+                </div>
+                <div class="bonus-card">
+                    <div class="kick">Bonus</div>
+                    <h3>Healthy Grocery Shopping Checklist</h3>
+                    <p>Know exactly what to buy at the grocery store — no more guesswork or impulse purchases.</p>
+                    <div class="bonus-expiry">🔥 Only with launch pricing</div>
+                </div>
+                <div class="bonus-card">
+                    <div class="kick">Bonus</div>
+                    <h3>Printable Habit Tracker</h3>
+                    <p>Build consistency and stay accountable with daily habit tracking that fits on your fridge.</p>
+                    <div class="bonus-expiry">🔥 Only with launch pricing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band soft">
+        <div class="wrap center">
+            <span class="eyebrow">❓ Questions?</span>
+            <h2 class="h-sec">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+            <details>
+                <summary>"I've tried everything — why would this be different?" <span class="chev">+</span></summary>
+                <div class="ans">Because this plan was designed for people exactly like you. It doesn't rely on willpower or perfectionism. It builds habits gradually over 9 weeks, using Indian meals you already eat. No calorie counting, no extreme restriction — just sustainable change. And if you're not satisfied, you're covered by the 7-day guarantee.</div>
+            </details>
+            <details>
+                <summary>"I don't have time to cook complicated meals." <span class="chev">+</span></summary>
+                <div class="ans">That's exactly why this was created. All meal options are simple, practical, and designed for busy people. No complicated recipes, no hours in the kitchen — just straightforward Indian meals you can prepare quickly with everyday ingredients.</div>
+            </details>
+            <details>
+                <summary>"Will I have to buy expensive supplements?" <span class="chev">+</span></summary>
+                <div class="ans">Absolutely not. The 9-Week Fat Loss Blueprint is built around everyday Indian foods you can find at any local grocery store. No protein powders, no exotic superfoods, no expensive supplements — just real, simple food that works.</div>
+            </details>
+            <details>
+                <summary>"I've lost weight before and gained it all back." <span class="chev">+</span></summary>
+                <div class="ans">Most diets focus on quick results. This focuses on sustainability. By building habits gradually over 9 weeks, you're not just losing weight — you're building a lifestyle that helps you keep it off. The habit progression system is designed specifically to prevent burnout and regain.</div>
+            </details>
+            <details>
+                <summary>"Is this suitable for vegetarians?" <span class="chev">+</span></summary>
+                <div class="ans">Yes! The 100+ Indian meal options include plenty of vegetarian and plant-based choices. You'll find options for breakfast, lunch, snacks, and dinner that are naturally vegetarian, with flexibility to adapt based on your preferences.</div>
+            </details>
+        </div>
+    </section>
+
+    <section class="band dark center">
+        <div class="wrap narrow">
+            <span class="eyebrow">🚀 Your Transformation Starts Now</span>
+            <h2 class="h-sec" style="color: #fff; font-size: clamp(30px, 5vw, 46px);">Stop the Cycle of Yo-Yo Dieting, Shame, and Frustration.</h2>
+            <p class="sub-sec" style="color: #c4b8a8; margin: 0 auto 14px;">You deserve a plan that actually works for you — not against you. A plan that acknowledges your struggle and gives you the tools to finally break free.</p>
+            <p style="color: #f5e8d8; font-weight: 700; margin: 18px 0 6px; font-size: 19px;">Get the complete 9-Week Fat Loss Blueprint + 4 bonuses for just ₹499</p>
+            <p style="color: #d4a373; font-size: 16px; font-weight: 600;">⚠️ Price increases to ₹999 soon — lock in your discount now</p>
+            <div style="margin-top: 24px;">
+                <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program">
+                    Get Instant Access — ₹499
+                    <span class="sm">100% Digital · Start in 5 Minutes · Save 50%</span>
+                </a>
+            </div>
+            <p class="cta-note">Instant access · Lifetime updates · 7-day guarantee · No risk</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="f-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Contact</a>
+        </div>
+        <div>
+            <span class="brand-footer">BeyondTheScale</span> &mdash; Real results that go beyond the number.
+            <br style="display:none;" />
+            <span style="opacity:0.6;">© 2026 BeyondTheScale. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <div class="pr"><span class="old">₹999</span> ₹499 <small>/-</small></div>
+        <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program">Lock in ₹499</a>
+    </div>
+
+    <script>
+        (function() {
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+            var els = document.querySelectorAll('.band .wrap, .guarantee-box, .offer-box, .stat-block, .faq-list, .urgency-section');
+            els.forEach(function(e) { e.classList.add('reveal'); });
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(function(e) { e.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            els.forEach(function(e) { io.observe(e); });
+        })();
+    </script>
+
 </body>
 </html>
