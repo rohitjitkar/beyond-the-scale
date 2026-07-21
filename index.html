@@ -1,1 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BeyondTheScale — 9-Week Fat Loss Blueprint for XL/XXL/XXXL</title>
+    <meta name="description" content="BeyondTheScale helps people in XL/XXL/XXXL lose fat, build sustainable habits, and feel like themselves again — with Indian meals, no calorie counting, no supplements." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== ROOT — Warm, Earthy Monochromatic Palette ===== */
+        :root {
+            --bg: #faf6f0;
+            --bg-soft: #f0e8dd;
+            --bg-dark: #2c241c;
+            --ink: #2c241c;
+            --ink-soft: #6b5d4f;
+            --line: #ddd0c0;
+            --accent: #b87333;
+            --accent-light: #d4a373;
+            --accent-dark: #8b5a2b;
+            --accent-soft: #f5e8d8;
+            --accent-warm: #c67a3a;
+            --accent-warm-press: #a86228;
+            --accent-warm-soft: #f5e8d8;
+            --ok: #7a9b6a;
+            --ok-soft: #eef5e8;
+            --urgent: #a64d2e;
+            --urgent-soft: #f5e0d8;
+            --radius: 20px;
+            --maxw: 1120px;
+            --shadow: 0 20px 56px rgba(44, 36, 28, 0.10);
+            --shadow-sm: 0 8px 24px rgba(44, 36, 28, 0.06);
+            --display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --body: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--body);
+            color: var(--ink);
+            background: var(--bg);
+            font-size: 18px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        h1,
+        h2,
+        h3 {
+            font-family: var(--display);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+        p {
+            margin: 0;
+        }
+        .hl {
+            color: var(--accent-warm);
+        }
+
+        /* ===== TOP URGENCY BAR ===== */
+        .urgent-bar {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--urgent);
+            color: #fff;
+            padding: 10px 16px;
+            text-align: center;
+            font-size: 14.5px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            letter-spacing: 0.02em;
+        }
+        .urgent-bar .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 14px;
+            border-radius: 100px;
+            font-weight: 800;
+        }
+        .urgent-bar .blink {
+            animation: blink 1.2s infinite;
+        }
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* ===== TOP NAV / BRAND BAR ===== */
+        .brand-bar {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg);
+            padding: 14px 22px;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .brand-bar .logo {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: -0.02em;
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .brand-bar .logo .dot {
+            color: var(--accent-warm);
+            font-size: 28px;
+        }
+        .brand-bar .tagline {
+            font-size: 14px;
+            color: var(--ink-soft);
+            font-weight: 500;
+        }
+        .brand-bar .tagline strong {
+            color: var(--accent-dark);
+        }
+
+        /* ===== LAYOUT ===== */
+        .band {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 72px 0;
+        }
+        .band.soft {
+            background: var(--bg-soft);
+        }
+        .band.dark {
+            background: var(--bg-dark);
+            color: #fff;
+        }
+        .band.dark .ink-soft {
+            color: #c4b8a8;
+        }
+        .band.tight {
+            padding: 48px 0;
+        }
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+        .narrow {
+            max-width: 760px;
+        }
+        .center {
+            text-align: center;
+        }
+        .ink-soft {
+            color: var(--ink-soft);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--body);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent-dark);
+            background: var(--accent-soft);
+            padding: 8px 16px;
+            border-radius: 100px;
+            margin-bottom: 18px;
+        }
+        .band.dark .eyebrow {
+            background: rgba(184, 115, 51, 0.25);
+            color: #d4a373;
+        }
+        .h-sec {
+            font-size: clamp(30px, 4.8vw, 48px);
+            margin-bottom: 14px;
+        }
+        .sub-sec {
+            font-size: clamp(17px, 2.2vw, 21px);
+            color: var(--ink-soft);
+            max-width: 680px;
+        }
+        .center .sub-sec {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.01em;
+            background: var(--accent-warm);
+            color: #fff;
+            padding: 20px 44px;
+            border-radius: 14px;
+            border: 0;
+            cursor: pointer;
+            box-shadow: 0 14px 34px rgba(184, 115, 51, 0.36);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            text-align: center;
+            line-height: 1.15;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn:hover {
+            background: var(--accent-warm-press);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 44px rgba(184, 115, 51, 0.44);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .btn .sm {
+            display: block;
+            font-family: var(--body);
+            font-weight: 500;
+            font-size: 13px;
+            opacity: 0.92;
+            letter-spacing: 0;
+            margin-top: 4px;
+        }
+        .btn .price-bump {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 12px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+        .cta-note {
+            margin-top: 14px;
+            font-size: 14px;
+            color: var(--ink-soft);
+        }
+        .band.dark .cta-note {
+            color: #c4b8a8;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 30px 0 64px;
+            background: radial-gradient(1300px 480px at 80% -10%, rgba(184, 115, 51, 0.08), transparent 65%), var(--bg);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 54px;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: clamp(36px, 5.8vw, 62px);
+            margin-bottom: 18px;
+        }
+        .hero .lede {
+            font-size: clamp(18px, 2.4vw, 22px);
+            color: var(--ink-soft);
+            margin-bottom: 28px;
+            max-width: 580px;
+        }
+        .hero .launch-badge {
+            display: inline-block;
+            background: var(--accent-warm);
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 4px 18px;
+            border-radius: 100px;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            margin-top: 28px;
+        }
+        .trust-row span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--ink-soft);
+        }
+        .mock-frame {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--line);
+        }
+        .mock-frame img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        /* ===== PAIN LIST ===== */
+        .pain-grid {
+            display: grid;
+            gap: 14px;
+            margin-top: 10px;
+        }
+        .pain-grid .pain-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 22px;
+            box-shadow: var(--shadow-sm);
+            font-weight: 500;
+        }
+        .pain-grid .x {
+            flex: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--urgent-soft);
+            color: var(--urgent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            margin-top: 1px;
+        }
+
+        /* ===== STATS ===== */
+        .stat-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 40px 44px;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-sm);
+            margin-top: 20px;
+        }
+        .stat-number {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(52px, 8vw, 88px);
+            line-height: 1;
+            color: var(--accent-warm);
+            letter-spacing: -0.03em;
+        }
+        .stat-number span {
+            font-size: 28px;
+            color: var(--ink);
+            font-weight: 600;
+        }
+        .stat-text {
+            font-size: 18px;
+            color: var(--ink-soft);
+            max-width: 400px;
+            font-weight: 500;
+        }
+        .stat-text strong {
+            color: var(--ink);
+        }
+
+        /* ===== ROADMAP ===== */
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 28px;
+        }
+        .roadmap-step {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 22px 18px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .roadmap-step:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        .roadmap-step .week {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            color: var(--accent-dark);
+            text-transform: uppercase;
+            background: var(--accent-soft);
+            display: inline-block;
+            padding: 2px 14px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+        .roadmap-step h4 {
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        .roadmap-step p {
+            font-size: 14px;
+            color: var(--ink-soft);
+            line-height: 1.4;
+        }
+
+        /* ===== CARDS ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 12px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        .card .ic {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+        .card p {
+            color: var(--ink-soft);
+            font-size: 16px;
+        }
+
+        /* ===== OFFER BOX ===== */
+        .offer-box {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #fff;
+            border: 2px solid var(--accent-warm);
+            border-radius: 24px;
+            padding: 40px 44px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .offer-box .badge-flag {
+            position: absolute;
+            top: 16px;
+            right: -28px;
+            background: var(--accent-warm);
+            color: #fff;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 4px 40px;
+            transform: rotate(45deg);
+            letter-spacing: 0.08em;
+            font-family: var(--body);
+        }
+        .offer-box .price {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: clamp(52px, 8vw, 80px);
+            line-height: 1;
+            color: var(--ink);
+            margin: 10px 0 4px;
+        }
+        .offer-box .price .old-price {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--ink-soft);
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+        .offer-box .price small {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--ink-soft);
+        }
+        .offer-box .sub {
+            font-size: 16px;
+            color: var(--ink-soft);
+            margin-bottom: 18px;
+        }
+        .offer-box .bonus-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 18px;
+            margin: 14px 0 22px;
+        }
+        .offer-box .bonus-list span {
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .offer-box .bonus-list span::before {
+            content: "✓";
+            color: var(--ok);
+            font-weight: 800;
+            font-size: 18px;
+        }
+        .offer-box .urgency-note {
+            background: var(--urgent-soft);
+            color: var(--urgent);
+            font-weight: 700;
+            font-size: 15px;
+            padding: 10px 18px;
+            border-radius: 12px;
+            margin: 12px 0 18px;
+            display: inline-block;
+        }
+
+        /* ===== URGENCY SECTION ===== */
+        .urgency-section {
+            background: var(--accent-dark);
+            color: #fff;
+            border-radius: var(--radius);
+            padding: 36px 40px;
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(139, 90, 43, 0.30);
+        }
+        .urgency-section h3 {
+            font-size: clamp(24px, 4vw, 36px);
+            margin-bottom: 8px;
+        }
+        .urgency-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto 18px;
+        }
+        .urgency-section .highlight-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 24px;
+            border-radius: 12px;
+            display: inline-block;
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+        .urgency-section .btn {
+            background: #fff;
+            color: var(--accent-dark);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+        }
+        .urgency-section .btn:hover {
+            background: #f5e8d8;
+        }
+
+        /* ===== GUARANTEE ===== */
+        .guarantee-box {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            background: #fff;
+            border: 2px solid var(--ok);
+            border-radius: 24px;
+            padding: 32px 36px;
+            max-width: 860px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-sm);
+        }
+        .seal {
+            flex: none;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--ok-soft);
+            color: var(--ok);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 1;
+            border: 2px dashed var(--ok);
+        }
+        .seal span {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            margin-top: 4px;
+        }
+        .guarantee-box h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .guarantee-box p {
+            color: var(--ink-soft);
+            font-size: 16px;
+        }
+
+        /* ===== BONUS CARDS ===== */
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 12px;
+        }
+        .bonus-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--accent-warm);
+            border-radius: 14px;
+            padding: 24px 26px;
+            box-shadow: var(--shadow-sm);
+        }
+        .bonus-card .kick {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent-dark);
+            margin-bottom: 8px;
+        }
+        .bonus-card h3 {
+            font-size: 19px;
+            margin-bottom: 6px;
+        }
+        .bonus-card p {
+            color: var(--ink-soft);
+            font-size: 15.5px;
+        }
+        .bonus-card .bonus-expiry {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-warm);
+            background: var(--accent-soft);
+            padding: 2px 14px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 760px;
+            margin: 6px auto 0;
+        }
+        .faq-list details {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            margin-bottom: 12px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        .faq-list summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 20px 24px;
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .faq-list summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-list summary .chev {
+            flex: none;
+            transition: transform 0.2s ease;
+            color: var(--accent-warm);
+            font-size: 24px;
+            line-height: 1;
+        }
+        .faq-list details[open] summary .chev {
+            transform: rotate(45deg);
+        }
+        .faq-list .ans {
+            padding: 0 24px 22px;
+            color: var(--ink-soft);
+            font-size: 16px;
+        }
+
+        /* ===== STICKY CTA ===== */
+        .sticky-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 50;
+            display: none;
+            background: #fff;
+            border-top: 1px solid var(--line);
+            box-shadow: 0 -8px 28px rgba(44, 36, 28, 0.10);
+            padding: 10px 14px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .sticky-cta .pr {
+            font-family: var(--display);
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 1;
+            color: var(--accent-warm);
+        }
+        .sticky-cta .pr .old {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            text-decoration: line-through;
+            margin-right: 6px;
+        }
+        .sticky-cta .pr small {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-soft);
+        }
+        .sticky-cta .btn {
+            padding: 12px 20px;
+            font-size: 15px;
+            box-shadow: none;
+            flex: none;
+            width: auto;
+            background: var(--accent-warm);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--bg-dark);
+            color: #c4b8a8;
+            text-align: center;
+            padding: 36px 22px;
+            font-size: 14px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        footer a {
+            color: #ddd0c0;
+            text-decoration: underline;
+        }
+        footer .f-links {
+            margin-bottom: 10px;
+        }
+        footer .f-links a {
+            margin: 0 10px;
+        }
+        footer .brand-footer {
+            font-family: var(--display);
+            font-weight: 700;
+            color: #d4a373;
+            letter-spacing: 0.02em;
+        }
+
+        /* ===== REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.in {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 860px) {
+            .band {
+                padding: 52px 0;
+            }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .hero .mock {
+                order: 2;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+            .card-grid,
+            .bonus-grid {
+                grid-template-columns: 1fr;
+            }
+            .roadmap {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .guarantee-box {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                padding: 28px 22px;
+            }
+            .btn {
+                width: 100%;
+                padding: 18px 24px;
+                font-size: 18px;
+            }
+            .stat-block {
+                flex-direction: column;
+                text-align: center;
+                padding: 28px 22px;
+            }
+            .offer-box {
+                padding: 32px 20px;
+            }
+            .sticky-cta {
+                display: flex;
+            }
+            body {
+                padding-bottom: 76px;
+            }
+            .hero h1 {
+                font-size: clamp(30px, 7vw, 42px);
+            }
+            .urgency-section {
+                padding: 28px 20px;
+            }
+            .brand-bar .tagline {
+                font-size: 12px;
+            }
+            .brand-bar .logo {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 540px) {
+            .roadmap {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .roadmap-step {
+                padding: 16px 12px;
+            }
+            .roadmap-step h4 {
+                font-size: 15px;
+            }
+            .offer-box .badge-flag {
+                font-size: 10px;
+                padding: 2px 30px;
+                right: -20px;
+                top: 12px;
+            }
+            .urgent-bar {
+                font-size: 12.5px;
+                padding: 8px 12px;
+            }
+            .brand-bar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 10px 16px;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+            .card:hover,
+            .roadmap-step:hover {
+                transform: none;
+            }
+            .urgent-bar .blink {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP URGENCY BAR ===== -->
+    <div class="urgent-bar">
+        <span>⚠️</span>
+        <span><strong>PRICE INCREASE COMING SOON</strong></span>
+        <span class="highlight">₹499</span>
+        <span>is a launch special — price goes up to <strong>₹999</strong></span>
+        <span class="blink">🔴 Lock in your discount now</span>
+    </div>
+
+    <!-- ===== BRAND BAR ===== -->
+    <div class="brand-bar">
+        <div class="logo">
+            <span>BeyondTheScale</span>
+            <span class="dot">•</span>
+        </div>
+        <div class="tagline">
+            <strong>Real results</strong> that go beyond the number
+        </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero band" id="top">
+        <div class="wrap">
+            <div class="hero-grid">
+                <div>
+                    <span class="launch-badge">🔥 Launch Price — 50% Off</span>
+                    <h1>You've Tried Everything. <span class="hl">This Time Is Different.</span></h1>
+                    <p class="lede">The 9-Week Fat Loss Blueprint helps people in XL/XXL/XXXL lose excess fat, build sustainable habits, and feel like themselves again — with Indian meals you already love, zero calorie counting, and no expensive supplements.</p>
+                    <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program">
+                        Get Instant Access — ₹499
+                        <span class="sm">Price increases to ₹999 soon <span class="price-bump">Save 50%</span></span>
+                    </a>
+                    <div class="trust-row">
+                        <span>✓ No calorie counting</span>
+                        <span>✓ No expensive supplements</span>
+                        <span>✓ 100+ Indian meal options</span>
+                    </div>
+                </div>
+                <div class="mock">
+                    <div class="mock-frame">
+                        <img src="https://drive.google.com/file/d/13Yv5J7zt9bISVfGzVqDSGk1T264bavAe/view?usp=sharing" alt="9-Week Fat Loss Blueprint — Digital PDF Program" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAIN / AGITATION ===== -->
+    <section class="band soft">
+        <div class="wrap narrow center">
+            <span class="eyebrow">😞 The Struggle Is Real</span>
+            <h2 class="h-sec">You're Not Lazy. You're Not Weak. You've Just Been Given the Wrong Tools.</h2>
+            <p class="sub-sec">Here's what nobody tells you about being in XL/XXL/XXXL — and why standard diets always fail.</p>
+        </div>
+        <div class="wrap narrow" style="margin-top: 28px;">
+            <div class="pain-grid">
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>You've tried every diet.</strong> Keto, intermittent fasting, juice cleanses — you've done them all. You've lost weight. You've gained it back. Every time.</div>
+                </div>
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>You hide from photos and mirrors.</strong> You feel invisible. You've been shamed, dismissed, and made to feel like you just need "more willpower."</div>
+                </div>
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>Clothes don't fit.</strong> Fewer than 10% of brands offer sizes beyond XL. You're forced into shapeless clothes that hide your body.</div>
+                </div>
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>You're exhausted all the time.</strong> Low energy, poor sleep, and the mental load of constantly fighting your own body.</div>
+                </div>
+                <div class="pain-item">
+                    <span class="x">✕</span>
+                    <div><strong>You've been told to "just eat less."</strong> As if it were that simple. As if you haven't tried that a hundred times.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESEARCH / EMPATHY ===== -->
+    <section class="band">
+        <div class="wrap center">
+            <span class="eyebrow">📊 The Science Behind the Struggle</span>
+            <h2 class="h-sec">The Hidden Barrier No One Talks About</h2>
+            <p class="sub-sec" style="margin-bottom: 16px;">A landmark Indian study revealed the real reason diets fail for people in larger bodies.</p>
+        </div>
+        <div class="wrap">
+            <div class="stat-block">
+                <div class="stat-number">
+                    71.1<span>%</span>
+                </div>
+                <div class="stat-text">
+                    of people with obesity experience <strong>internalized weight bias</strong> — they believe the negative stereotypes society throws at them. This doesn't just hurt emotionally. It <strong>kills motivation, sabotages diet adherence, and leads to weight regain</strong>.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISUAL ROADMAP ===== -->
+    <section class="band soft">
+        <div class="wrap center">
+            <span class="eyebrow">🗺️ Your Path to Change</span>
+            <h2 class="h-sec">How the 9 Weeks Unfold</h2>
+            <p class="sub-sec">No overwhelm. No perfectionism. Just small, consistent steps that build on each other.</p>
+        </div>
+        <div class="wrap">
+            <div class="roadmap">
+                <div class="roadmap-step">
+                    <div class="week">Week 1</div>
+                    <h4>Hydration &amp; Awareness</h4>
+                    <p>Start with a simple water target and track your current eating pattern without changing anything.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 2</div>
+                    <h4>Breakfast Upgrade</h4>
+                    <p>Swap one meal for a high-protein, Indian breakfast option that keeps you full longer.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 3</div>
+                    <h4>Lunch Restructure</h4>
+                    <p>Balance your lunch plate with the right portions of roti, dal, sabzi, and salad.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 4</div>
+                    <h4>Smart Snacking</h4>
+                    <p>Replace chips and biscuits with satisfying, nutrient-dense Indian snack alternatives.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 5</div>
+                    <h4>Dinner Optimization</h4>
+                    <p>Lighten your dinner without feeling deprived — using simple Indian preparations.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 6</div>
+                    <h4>Meal Timing</h4>
+                    <p>Structure your eating windows to align with your body's natural hunger cues.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 7</div>
+                    <h4>Mindful Eating</h4>
+                    <p>Learn to recognize true hunger vs. emotional triggers — without restriction.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 8</div>
+                    <h4>Movement Integration</h4>
+                    <p>Add simple walking and light activity into your daily routine, regardless of joint pain.</p>
+                </div>
+                <div class="roadmap-step">
+                    <div class="week">Week 9</div>
+                    <h4>Lifestyle &amp; Maintenance</h4>
+                    <p>Solidify your habits and create a sustainable plan that works for the long haul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT'S INSIDE ===== -->
+    <section class="band">
+        <div class="wrap center">
+            <span class="eyebrow">📦 What You Get</span>
+            <h2 class="h-sec">A Complete System, Not Just a Diet</h2>
+            <p class="sub-sec" style="margin-bottom: 32px;">Everything you need to break the cycle of yo-yo dieting and build a lifestyle that actually sticks.</p>
+        </div>
+        <div class="wrap">
+            <div class="card-grid">
+                <div class="card">
+                    <div class="ic">🍛</div>
+                    <h3>100+ Indian Meal Options</h3>
+                    <p>Breakfast, lunch, snacks, and dinner — all with familiar Indian flavours. Roti, dal, sabzi, chawal. Real food.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">📈</div>
+                    <h3>Weekly Habit Progression</h3>
+                    <p>Build sustainable habits step by step — each week builds on the last for lasting change. No overwhelm.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">🌿</div>
+                    <h3>Detox &amp; Light Eating Days</h3>
+                    <p>Built-in lighter eating days that help you stay consistent without feeling deprived or restricted.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">💪</div>
+                    <h3>Practical Lifestyle Guidelines</h3>
+                    <p>Hydration, meal timing, walking, and physical activity — the complete picture for lasting health.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">🧠</div>
+                    <h3>Mindset &amp; Emotional Eating</h3>
+                    <p>Strategies to break the emotional eating cycle and build a healthier relationship with food.</p>
+                </div>
+                <div class="card">
+                    <div class="ic">📱</div>
+                    <h3>Mobile-Friendly Digital PDF</h3>
+                    <p>Access anytime on your phone, tablet, or computer — your blueprint goes wherever you go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== URGENCY SECTION ===== -->
+    <section class="band soft">
+        <div class="wrap narrow">
+            <div class="urgency-section">
+                <span style="font-size: 32px; display: block; margin-bottom: 6px;">⏳</span>
+                <h3>Don't Wait — Price Increases Soon</h3>
+                <p>You're seeing the <strong>launch price</strong> of ₹499. Once this limited-time offer ends, the price jumps to ₹999.</p>
+                <div class="highlight-box">₹499 → ₹999</div>
+                <p style="font-size: 15px; opacity: 0.85;">Plus, the 4 free bonuses are only available with this launch pricing.</p>
+                <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program" style="margin-top: 12px;">
+                    Lock in ₹499 Now
+                    <span class="sm">Before the price goes up</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICE / OFFER ===== -->
+    <section class="band center">
+        <div class="wrap narrow">
+            <span class="eyebrow">💰 Simple, Fair Pricing</span>
+            <h2 class="h-sec">Invest in a Plan That Actually Works</h2>
+            <p class="sub-sec" style="margin-bottom: 28px;">No hidden fees. No upsells. Just a complete system to help you finally break the cycle.</p>
+        </div>
+        <div class="wrap">
+            <div class="offer-box">
+                <div class="badge-flag">Launch Price</div>
+                <div style="font-size: 16px; font-weight: 600; color: var(--accent-dark); text-transform: uppercase; letter-spacing: 0.06em;">Limited Time Offer</div>
+                <div class="price">
+                    <span class="old-price">₹999</span> ₹499 <small>/-</small>
+                </div>
+                <div class="sub">Less than ₹56 per week — for a complete 9-week system</div>
+                <div class="urgency-note">⏳ Price increases to ₹999 — lock in your discount</div>
+                <div class="bonus-list">
+                    <span>Daily Water Tracker</span>
+                    <span>Weekly Progress Tracker</span>
+                    <span>Grocery Checklist</span>
+                    <span>Habit Tracker</span>
+                </div>
+                <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program" style="margin-bottom: 12px;">
+                    Get Instant Access — ₹499
+                    <span class="sm">100% Digital · Start in 5 Minutes · Save 50%</span>
+                </a>
+                <p style="font-size: 14px; color: var(--ink-soft);">Secure checkout · Instant download · 7-day guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GUARANTEE ===== -->
+    <section class="band soft">
+        <div class="wrap">
+            <div class="guarantee-box">
+                <div class="seal">7 <span>DAY GUARANTEE</span></div>
+                <div>
+                    <h3>Try It Completely Risk-Free</h3>
+                    <p>If you're not satisfied with the quality and usefulness of the 9-Week Fat Loss Blueprint within 7 days of purchase, simply contact us and we'll provide a full refund. <strong>You have nothing to lose — except the weight.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BONUSES ===== -->
+    <section class="band">
+        <div class="wrap center">
+            <span class="eyebrow">🎁 Included at No Extra Cost</span>
+            <h2 class="h-sec">4 Free Bonuses to Accelerate Your Progress</h2>
+            <p class="sub-sec" style="margin-bottom: 28px;">These tools are designed to keep you accountable and on track — included with your purchase.</p>
+        </div>
+        <div class="wrap">
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="kick">Bonus</div>
+                    <h3>Daily Water Intake Tracker</h3>
+                    <p>Stay hydrated with a simple, visual tracker that makes hitting your water goals effortless.</p>
+                    <div class="bonus-expiry">🔥 Only with launch pricing</div>
+                </div>
+                <div class="bonus-card">
+                    <div class="kick">Bonus</div>
+                    <h3>Weekly Progress Tracker</h3>
+                    <p>Monitor your weight, measurements, and energy levels week by week to stay motivated.</p>
+                    <div class="bonus-expiry">🔥 Only with launch pricing</div>
+                </div>
+                <div class="bonus-card">
+                    <div class="kick">Bonus</div>
+                    <h3>Healthy Grocery Shopping Checklist</h3>
+                    <p>Know exactly what to buy at the grocery store — no more guesswork or impulse purchases.</p>
+                    <div class="bonus-expiry">🔥 Only with launch pricing</div>
+                </div>
+                <div class="bonus-card">
+                    <div class="kick">Bonus</div>
+                    <h3>Printable Habit Tracker</h3>
+                    <p>Build consistency and stay accountable with daily habit tracking that fits on your fridge.</p>
+                    <div class="bonus-expiry">🔥 Only with launch pricing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="band soft">
+        <div class="wrap center">
+            <span class="eyebrow">❓ Questions?</span>
+            <h2 class="h-sec">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+            <details>
+                <summary>"I've tried everything — why would this be different?" <span class="chev">+</span></summary>
+                <div class="ans">Because this plan was designed for people exactly like you. It doesn't rely on willpower or perfectionism. It builds habits gradually over 9 weeks, using Indian meals you already eat. No calorie counting, no extreme restriction — just sustainable change. And if you're not satisfied, you're covered by the 7-day guarantee.</div>
+            </details>
+            <details>
+                <summary>"I don't have time to cook complicated meals." <span class="chev">+</span></summary>
+                <div class="ans">That's exactly why this was created. All meal options are simple, practical, and designed for busy people. No complicated recipes, no hours in the kitchen — just straightforward Indian meals you can prepare quickly with everyday ingredients.</div>
+            </details>
+            <details>
+                <summary>"Will I have to buy expensive supplements?" <span class="chev">+</span></summary>
+                <div class="ans">Absolutely not. The 9-Week Fat Loss Blueprint is built around everyday Indian foods you can find at any local grocery store. No protein powders, no exotic superfoods, no expensive supplements — just real, simple food that works.</div>
+            </details>
+            <details>
+                <summary>"I've lost weight before and gained it all back." <span class="chev">+</span></summary>
+                <div class="ans">Most diets focus on quick results. This focuses on sustainability. By building habits gradually over 9 weeks, you're not just losing weight — you're building a lifestyle that helps you keep it off. The habit progression system is designed specifically to prevent burnout and regain.</div>
+            </details>
+            <details>
+                <summary>"Is this suitable for vegetarians?" <span class="chev">+</span></summary>
+                <div class="ans">Yes! The 100+ Indian meal options include plenty of vegetarian and plant-based choices. You'll find options for breakfast, lunch, snacks, and dinner that are naturally vegetarian, with flexibility to adapt based on your preferences.</div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="band dark center">
+        <div class="wrap narrow">
+            <span class="eyebrow">🚀 Your Transformation Starts Now</span>
+            <h2 class="h-sec" style="color: #fff; font-size: clamp(30px, 5vw, 46px);">Stop the Cycle of Yo-Yo Dieting, Shame, and Frustration.</h2>
+            <p class="sub-sec" style="color: #c4b8a8; margin: 0 auto 14px;">You deserve a plan that actually works for you — not against you. A plan that acknowledges your struggle and gives you the tools to finally break free.</p>
+            <p style="color: #f5e8d8; font-weight: 700; margin: 18px 0 6px; font-size: 19px;">Get the complete 9-Week Fat Loss Blueprint + 4 bonuses for just ₹499</p>
+            <p style="color: #d4a373; font-size: 16px; font-weight: 600;">⚠️ Price increases to ₹999 soon — lock in your discount now</p>
+            <div style="margin-top: 24px;">
+                <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program">
+                    Get Instant Access — ₹499
+                    <span class="sm">100% Digital · Start in 5 Minutes · Save 50%</span>
+                </a>
+            </div>
+            <p class="cta-note">Instant access · Lifetime updates · 7-day guarantee · No risk</p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="f-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Contact</a>
+        </div>
+        <div>
+            <span class="brand-footer">BeyondTheScale</span> &mdash; Real results that go beyond the number.
+            <br style="display:none;" />
+            <span style="opacity:0.6;">© 2026 BeyondTheScale. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- ===== STICKY MOBILE CTA ===== -->
+    <div class="sticky-cta">
+        <div class="pr"><span class="old">₹999</span> ₹499 <small>/-</small></div>
+        <a class="btn" href="https://superprofile.bio/vp/9-week-fat-loss-blueprint-—-digital-pdf-program">Lock in ₹499</a>
+    </div>
+
+    <!-- ===== SCROLL REVEAL ===== -->
+    <script>
+        (function() {
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+            var els = document.querySelectorAll('.band .wrap, .guarantee-box, .offer-box, .stat-block, .faq-list, .urgency-section');
+            els.forEach(function(e) { e.classList.add('reveal'); });
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(function(e) { e.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            els.forEach(function(e) { io.observe(e); });
+        })();
+    </script>
+
+</body>
+</html>
